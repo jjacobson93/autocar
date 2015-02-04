@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<title>AutoCar</title>
+	</head>
+	<body>
+		<form id="setUpForm">
+            <fieldset>
+                <p>
+                    Hello User
+                    <br />
+                    <br />
+                    Below are forms that you will use to define the map, starting position of
+                    the AutoCar, and obstacles on the map. Please fill out all of the forms
+                    and click the submit button.
+                </p>
+                <br />
+                <fieldset>
+                    <legend>
+                        Size of Map
+                    </legend>
+                    <label>
+                        Width:
+                        <input type="text" name="width" size="30" maxlength="100" value="20">
+                    </label>
+                    <br />
+                    <label>
+                        Height:
+                        <input type="text" name="height" size="30" maxlength="100" value="20">
+                    </label>
+                    <br />
+                </fieldset>
+                <br />
+                <fieldset>
+                    <legend>
+                        Starting position of AutoCar
+                    </legend>
+                    <label>
+                        X:
+                        <input id="start-x" type="text" name="x" size="30" maxlength="100" value="2">
+                    </label>
+                    <br />
+                    <label>
+                        Y:
+                        <input id="start-y" type="text" name="y" size="30" maxlength="100" value="2">
+                    </label>
+                    <br />
+                </fieldset>
+                <br />
+                <div id="obstacles">
+                    <fieldset>
+                        <legend>
+                            Obstacle
+                        </legend>
+                        <label>
+                            x:
+                            <input type="text" name="x" size="30" maxlength="100" value="5">
+                        </label>
+                        <br />
+                        <label>
+                            y:
+                            <input type="text" name="y" size="30" maxlength="100" value="5">
+                        </label>
+                        <br />
+                        <label>
+                            w:
+                            <input type="text" name="w" size="30" maxlength="100" value="5">
+                        </label>
+                        <br />
+                        <label>
+                            h:
+                            <input type="text" name="h" size="30" maxlength="100" value="5">
+                        </label>
+                        <br />
+                    </fieldset>
+                </div>
+                <br />
+                <button type="button" onclick="addObstacle()">Add Obstacle +</button>
+                <br />
+                <br />
+			</fieldset>
+		</form>
+        <button type="button" onclick="submitSetUp()">Submit Values</button>
+        
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- our scripts -->
+    <script src="static/js/script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<title>AutoCar</title>
+	</head>
+	<body>
+		<form id="waypointForm">
+            <fieldset>
+                <p>
+                    Hello User
+                    <br />
+                    <br />
+                    The values you submitted have been transmitted to the car. Now add the waypoints you want the car to go to.
+                    <br />
+                    Press start to order the car to move torwards the waypoint you set. 
+                    <br />
+                    Press stop to stop the AutoCar. 
+                    <br />
+                    Press Delete Waypoints to clear all waypoints. 
+                    <br />
+                    Press Redefine Map to go back to the previous page.
+                </p>
+                <br />
+                <fieldset>
+                    <legend>
+                        Commands
+                    </legend>
+                    <button onclick="start()">Start</button>
+                    <button onclick="stop()">Stop</button>
+                    <button onclick="deleteWaypoints()">Delete Waypoints</button>
+                    <button onclick="submitRedefine()">Redefine Map</button>
+                </fieldset>
+                <br />
+                <div id="waypoint">
+                    <fieldset>
+                        <legend>
+                            Add Waypoint
+                        </legend>
+                        <label>
+                            X:
+                            <input type="text" name="x" size="30" maxlength="100">
+                        </label>
+                        <br />
+                        <label>
+                            Y:
+                            <input type="text" name="y" size="30" maxlength="100">
+                        </label>
+                        <br />
+                    </fieldset>
+                </div>
+                <br />
+                <button type="button" onclick="addWaypoint()">Add Waypoint +</button>
+                <br />
+                <div id="waypoints-list">
+                    {{ waypoints }}
+                </div>
+                <br />
+                <div id="errors">
+                </div>
+                <br>
+			</fieldset>
+		</form>
+            <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- our scripts -->
+    <script src="static/js/script.js"></script>
+	</body>
+</html>
